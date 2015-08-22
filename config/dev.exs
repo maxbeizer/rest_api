@@ -32,4 +32,4 @@ config :rest_api, RestApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "rest_api_dev",
-  size: 10 # The amount of database connections in the pool
+  pool_size: 10 # The amount of database connections in the pool

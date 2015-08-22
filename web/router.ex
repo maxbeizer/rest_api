@@ -19,4 +19,10 @@ defmodule RestApi.Router do
       resources "/posts", PostController
     end
   end
+
+  scope "/api", RestApi do
+    pipe_through :api
+
+    resources "/contacts", ContactController
+  end
 end
