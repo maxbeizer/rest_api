@@ -13,13 +13,10 @@ defmodule RestApi.Router do
   end
 
   scope "/", RestApi do
-    pipe_through :browser # Use the default browser stack
+    pipe_through :api
 
-    get "/", PageController, :index
+    scope "/v1", V1, as: :v1 do
+      resources "/posts", PostController
+    end
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", RestApi do
-  #   pipe_through :api
-  # end
 end

@@ -15,4 +15,5 @@ config :rest_api, RestApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "rest_api_test",
-  size: 1 # Use a single connection for transactional tests
+  pool: Ecto.Adapters.SQL.Sandbox,
+  pool_size: 1 # Use a single connection for transactional tests

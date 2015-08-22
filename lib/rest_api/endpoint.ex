@@ -31,5 +31,5 @@ defmodule RestApi.Endpoint do
     key: "_rest_api_key",
     signing_salt: "uDn/CGke"
 
-  plug :router, RestApi.Router
+  plug RestApi.Router
 end
